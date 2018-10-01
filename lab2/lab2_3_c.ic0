@@ -1,0 +1,38 @@
+* "simulator" "HSPICE" 
+* "version" "J-2014.09 64-BIT"
+* "format" "HSP"
+* "rundate" "04:02:53 10/01/2018 "
+* "netlist" "lab2_3_c.sp "
+* "runtitle" "ee105 circuit please have mercy djhwsopifthjweoithoiu"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vdd =  18.0000        
++ vi =   0.            
++ vo =  25.6418u       
++ vss = -18.0000        
++ xlm741.3 =   0.            
++ xlm741.4 =-691.5377m       
++ xlm741.5 =  17.9747        
++ xlm741.6 =  17.9737        
++ xlm741.7 =   1.0000m       
++ xlm741.8 =  16.3700        
++ xlm741.9 =  16.9193        
++ xlm741.10 = -16.3700        
++ xlm741.15 = 783.8941m       
++ xlm741.16 =   0.            
++ xlm741.17 =   0.            
++ xlm741.20 = 180.0256m       
++ xlm741.21 =-179.9744m       
++ xlm741.22 =  25.6418u       
++ xlm741.23 = 783.8941m       
++ xlm741.24 = 783.8941m       
++ xlm741.25 = 143.2515m       
++ xlm741.26 = 650.0256m       
++ xlm741.27 =-649.9744m       
++ xlm741.49 =   0.            
++ xlm741.98 =   0.            
+***   END: Saved Operating Point ***                     

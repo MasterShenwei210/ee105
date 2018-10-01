@@ -1,0 +1,69 @@
+***** HSPICE -- J-2014.09 64-BIT (Aug 22 2014) RHEL64 ******
+ Input File: lab2_3_c.sp
+ lic:
+ lic: FLEXlm: v10.9.8
+ lic: USER:   ee105-abn            HOSTNAME: hpse-10.EECS.Berkeley.EDU
+ lic: HOSTID: 0026556b9652         PID:      17739
+ lic: Using FLEXlm license file:
+ lic: 27005@license-srv.eecs.berkeley.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 25-sep-2020/2018.09
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 27005@license-srv.eecs.berkeley.edu
+ lic:
+ init: begin read circuit files,  cpu clock=  6.90E-01
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/a
+                         d
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/a
+                         d
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/b
+                         ehave
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/b
+                         jt
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/b
+                         urr_brn
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/c
+                         omlinear
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/d
+                         io
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/f
+                         et
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/l
+                         in_tech
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/p
+                         ci
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/s
+                         ignet
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/t
+                         i
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/t
+                         line
+       option search = /share/instsww/synopsys/J-2014.09/hspice/parts/x
+                         ilinx
+       option runlvl
+       option post =     2.00
+       option nomod
+ init: end read circuit files,  cpu clock=  6.90E-01 peak memory=       188 mb
+ init: begin check errors,  cpu clock=  6.90E-01
+ init: end check errors,  cpu clock=  6.90E-01 peak memory=       189 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  6.90E-01
+       establish matrix -- done,  cpu clock=  6.90E-01 peak memory=       189 mb
+       re-order matrix -- done,  cpu clock=  6.90E-01 peak memory=       189 mb
+ init: end setup matrix,  cpu clock=  6.90E-01 peak memory=       189 mb
+ dcop: begin dcop,  cpu clock=  6.90E-01
+ dcop: end dcop,  cpu clock=  6.90E-01 peak memory=       189 mb  tot_iter=      14
+ output: lab2_3_c.ac0
+ sweep: ac ac0    begin, #sweeps=3001 cpu clock=  6.90E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    3.98E+00
+ ac: frequency=    1.58E+01
+ ac: frequency=    6.31E+01
+ ac: frequency=    2.51E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    3.98E+03
+ ac: frequency=    1.58E+04
+ ac: frequency=    6.31E+04
+ ac: frequency=    2.51E+05
+ ac: frequency=    1.00E+06
+ sweep: ac ac0    end,  cpu clock=  8.50E-01 peak memory=       189 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

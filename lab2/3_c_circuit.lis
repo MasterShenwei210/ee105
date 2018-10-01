@@ -1,0 +1,259 @@
+
+running...	/share/b/bin/hspice on hpse-10 (x86_64, Linux, Centos)
+running...	'source /share/instsww/synopsys/J-2014.09/hspice//bin/cshrc.meta'
+finding...	libraries under /share/instsww/synopsys/J-2014.09/hspice//
+running...	'/share/instsww/synopsys/J-2014.09/hspice//bin/hspice lab2_3_c.sp'
+
+Using: /share/instsww/synopsys/J-2014.09/hspice/amd64/hspice lab2_3_c.sp
+ ****** HSPICE -- J-2014.09 64-BIT (Aug 22 2014) RHEL64 ******                  
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: lab2_3_c.sp                                                       
+  Command line options: lab2_3_c.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   ee105-abn            HOSTNAME: hpse-10.EECS.Berkeley.EDU 
+ lic: HOSTID: 0026556b9652         PID:      17739 
+ lic: Using FLEXlm license file: 
+ lic: 27005@license-srv.eecs.berkeley.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 25-sep-2020/2018.09 
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 27005@license-srv.eecs.berkeley.edu 
+ lic:   
+ Init: read install configuration file: /share/instsww/synopsys/J-2014.09/hspice/meta.cfg
+1****** HSPICE -- J-2014.09 64-BIT (Aug 22 2014) RHEL64 ******                  
+ ******  
+ ee105 circuit please have mercy djhwsopifthjweoithoiu
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xlm741.                         lm741/ns           1.00 
+  **warning** (./lm741.mod:85) Inductance for the inductor xlm741.l2 >= 0.1 henry, please verify it.
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 15
+ file=lab2_3_c.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- J-2014.09 64-BIT (Aug 22 2014) RHEL64 ******                  
+ ******  
+ ee105 circuit please have mercy djhwsopifthjweoithoiu
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vdd     =  18.0000  0:vi      =   0.      0:vo      =  25.6418u
+ +0:vss     = -18.0000  1:3       =   0.      1:4       =-691.5377m
+ +1:5       =  17.9747  1:6       =  17.9737  1:7       =   1.0000m
+ +1:8       =  16.3700  1:9       =  16.9193  1:10      = -16.3700 
+ +1:15      = 783.8941m 1:16      =   0.      1:17      =   0.     
+ +1:20      = 180.0256m 1:21      =-179.9744m 1:22      =  25.6418u
+ +1:23      = 783.8941m 1:24      = 783.8941m 1:25      = 143.2515m
+ +1:26      = 650.0256m 1:27      =-649.9744m 1:49      =   0.     
+ +1:98      =   0.     
+
+
+ **** voltage sources
+
+ subckt                                    xlm741     xlm741     xlm741    
+ element  0:vdd      0:vi       0:vss      1:v2       1:v3       1:v4      
+  volts     18.0000     0.       -18.0000     1.6300     1.6300   180.0000m
+  current  -27.3417m  -61.4092n    1.7000m   -1.9321u   33.2903p   16.1354u
+  power    492.1502m    0.        30.6000m    3.1493u  -54.2633p   -2.9044u
+
+ subckt   xlm741     xlm741     xlm741    
+ element  1:v5       1:v6       1:v7      
+  volts    180.0000m  650.0000m  650.0000m
+  current -991.9947f  134.8630f  -25.6257m
+  power    178.5590f  -87.6609f   16.6567m
+
+     total voltage source power dissipation=  539.4072m       watts
+
+
+
+ **** current sources
+
+ subckt   xlm741     xlm741     xlm741    
+ element  1:ios      1:i1       1:i2      
+  volts      0.        17.3085    36.0000 
+  current   20.0000n  100.0000u    1.6000m
+  power      0.        -1.7308m  -57.6000m
+
+
+     total current source power dissipation= -59.3308m       watts
+
+ **** resistors
+
+ subckt              xlm741     xlm741     xlm741     xlm741     xlm741    
+ element  0:rl       1:r1       1:r2       1:r3       1:r4       1:r8      
+  r value    1.0000m  250.0000k  250.0000k  517.0000   517.0000    40.0000k
+  v drop    25.6418u    0.         0.       -25.3065m  -26.3109m   18.0000 
+  current   25.6418m    0.         0.       -48.9488u  -50.8915u  450.0000u
+  power    657.5038n    0.         0.         1.2387u    1.3390u    8.1000m
+
+ subckt   xlm741     xlm741     xlm741     xlm741     xlm741     xlm741    
+ element  1:r9       1:r5       1:r12      1:r13      1:r16      1:r17     
+  r value   40.0000k   95.4930x    1.0000x    1.0000k   25.0000    25.0000 
+  v drop    18.0000   -16.9193  -783.8941m    0.        -3.3715p  640.6426m
+  current  450.0000u -177.1788n -783.8941n    0.      -134.8610f   25.6257m
+  power      8.1000m    2.9977u  614.4899n    0.       4.547e-25   16.4169m
+
+ subckt   xlm741    
+ element  1:rl3     
+  r value  100.0000k
+  v drop     0.     
+  current    0.     
+  power      0.     
+
+
+ **** inductors
+
+ subckt   xlm741.    xlm741.   
+ element  1:l2       1:l3      
+  l value  530.5000m  100.0000p
+  v drop     0.         0.     
+  current    0.         0.     
+  power      0.         0.     
+
+
+ **** voltage-controlled current sources
+
+
+ subckt     xlm741     xlm741     xlm741  
+ element  1:g1       1:g3       1:g4      
+  v drop   -16.9193  -783.8941m    0.     
+  current    2.1093u   16.9193u    0.     
+
+
+
+
+ **** voltage-controlled voltage sources
+
+
+ subckt     xlm741     xlm741     xlm741  
+ element  1:eos      1:eh       1:e1      
+  volts      1.0000m   18.0000    17.2161 
+  current  -81.4092n   18.0676u   25.6257m
+
+
+
+
+ **** current-controlled current sources
+
+
+   subckt   xlm741  
+ element  1:f6      
+  current  450.0000u
+
+
+
+
+ **** diodes
+
+
+ subckt     xlm741     xlm741     xlm741     xlm741     xlm741     xlm741  
+ element  1:d1       1:d2       1:d5       1:d6       1:d4       1:d3      
+ model    1:dx       1:dx       1:dx       1:dx       1:dx       1:dx      
+  id         1.9321u   -1.0000f -994.5413a   25.6257m   -1.0000f   16.1354u
+  vd       549.3394m  -33.2893  -133.8684m  793.2259m -963.8684m  603.8684m
+  req       13.2976k    0.       4.706e+15    1.0026     0.         1.5923k
+  cap        0.         0.         0.         0.         0.         0.     
+
+
+
+
+ **** bipolar junction transistors
+
+
+ subckt     xlm741     xlm741  
+ element  1:q1       1:q2      
+ model    1:qx       1:qx      
+  ib        78.3180n   81.4264n
+  ic        48.9487u   50.8915u
+  vbe      691.5377m  692.5377m
+  vce       18.6662    18.6652 
+  vbc      -17.9747   -17.9727 
+  vs       -17.9747   -17.9737 
+  power    913.7425u  949.9582u
+  betad    625.0000   625.0000 
+  gm         1.9052m    1.9808m
+  rpi      328.0453k  315.5222k
+  rx         0.         0.     
+  ro       1.797e+17  1.797e+17
+  cpi        0.         0.     
+  cmu        0.         0.     
+  cbx        0.         0.     
+  ccs        0.         0.     
+  betaac   625.0000   625.0000 
+  ft       303.2259g  315.2610g
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- J-2014.09 64-BIT (Aug 22 2014) RHEL64 ******                  
+ ******  
+ ee105 circuit please have mercy djhwsopifthjweoithoiu
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+ cpu MHz	: 2499.000
+  
+ OS:
+ Linux version 2.6.32-754.3.5.el6.x86_64 (mockbuild@x86-01.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-23) (GCC) ) #1 SMP Tue Aug 14 20:46:41 UTC 2018
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      26 # elements   =      45
+  # resistors   =      13 # capacitors =       3 # inductors   =       2
+  # mutual_inds =       0 # vccs       =       3 # vcvs        =       3
+  # cccs        =       1 # ccvs       =       0 # volt_srcs   =       9
+  # curr_srcs   =       3 # diodes     =       6 # bjts        =       2
+  # jfets       =       0 # mosfets    =       0 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          14
+  ac analysis        0.16        3001        3001
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        189.47 megabytes
+           total cpu time            0.17 seconds
+           total elapsed time        1.22 seconds
+           job started at     04:02:53 10/01/2018
+           job ended   at     04:02:54 10/01/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.99(s)
